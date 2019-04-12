@@ -16,6 +16,8 @@ const recipientAddress = "BDFVOEUKDARRHWGG9OZVUHHIZTBKZFIHTEC9WXONZGJIFUDMMKFYYA
 
 exports.sendMessage = (req, res) => {
 	console.log('Body:  ' + JSON.stringify(req.body));
+	// TODO: check the validity of the request.
+	//		 need for a token a service to validate.
 
 	var propertyCounter = req.body.values.length;
 	req.body.values.map((t, i, a) => {
